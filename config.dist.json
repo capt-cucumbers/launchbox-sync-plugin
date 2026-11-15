@@ -1,0 +1,10 @@
+{
+    "windows_local": {
+        "manifest_name": "Windows - Local",
+        "manifest_path": "C:\\Path\\To\\GameBox\\data\\sources\\local\\manifest.json"
+    },
+    "windows_steam": {
+        "manifest_name": "Windows - Steam",
+        "manifest_path": "C:\\Path\\To\\GameBox\\data\\sources\\steam\\manifest.json"
+    }
+}

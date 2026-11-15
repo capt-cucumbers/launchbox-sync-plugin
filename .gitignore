@@ -1,0 +1,36 @@
+# Build outputs
+bin/
+obj/
+build/
+*.zip
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstate
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+
+# Win OS
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# Configuration and project-specific overrides
+config.json
+manifest.json
+!manifest.dist.json
+/releases/
+
+# Local developer tools and private runners
+local/
+scripts/local/
+# Operations Tooling & Manifests
+.*-ops.json

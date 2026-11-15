@@ -1,0 +1,43 @@
+<lbThemeControls:ThemedWindow x:Class="LaunchBoxSyncPlugin.ProgressWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lbThemeControls="clr-namespace:Unbroken.LaunchBox.Windows.Desktop.DialogTheming.Controls;assembly=LaunchBox"
+             xmlns:lbTheme="clr-namespace:Unbroken.LaunchBox.Windows.Desktop.DialogTheming;assembly=LaunchBox"
+             mc:Ignorable="d" 
+             Title="{Binding MainStatus}" Height="200" Width="600"
+             WindowStartupLocation="CenterOwner" ResizeMode="NoResize"
+             Background="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type lbTheme:Brushes}, ResourceId=Layer0BackgroundBrush}}"
+             Foreground="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type lbTheme:Brushes}, ResourceId=ForegroundBrush}}"
+             Loaded="Window_Loaded">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Main Status -->
+        <TextBlock Grid.Row="0" Text="{Binding MainStatus}" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,10" Foreground="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type lbTheme:Brushes}, ResourceId=ForegroundBrush}}"/>
+
+        <!-- Sub Status -->
+        <TextBlock Grid.Row="1" Text="{Binding SubStatus}" FontSize="14" Opacity="0.8" TextWrapping="Wrap" Margin="0,0,0,10" Foreground="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type lbTheme:Brushes}, ResourceId=ForegroundBrush}}"/>
+
+        <!-- Bottom row: ProgressBar and Cancel Button -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- ProgressBar -->
+            <ProgressBar Grid.Column="0" IsIndeterminate="True" Height="24" />
+
+            <!-- Cancel Button -->
+            <Button Grid.Column="2" Content="Cancel" Click="BtnCancel_Click" Width="80" Height="26" Style="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type lbTheme:Styles}, ResourceId=AccentButton}}"/>
+        </Grid>
+    </Grid>
+</lbThemeControls:ThemedWindow>
